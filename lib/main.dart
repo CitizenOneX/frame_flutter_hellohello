@@ -104,6 +104,7 @@ class MainAppState extends State<MainApp> {
             break;
           default:
             _appendLog('Unexpected state on scan timeout: $_currentState');
+            if (mounted) setState(() {});
         }
       })
       .listen((device) {
