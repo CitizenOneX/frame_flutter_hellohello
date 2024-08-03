@@ -40,6 +40,7 @@ class MainAppState extends State<MainApp> {
   final ScrollController _logScrollController = ScrollController();
 
   MainAppState() {
+    Logger.root.level = Level.ALL;
     Logger.root.onRecord.listen((record) {
       debugPrint('${record.level.name}: ${record.time}: ${record.message}');
     });
