@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
-import 'simple_frame_app.dart';
+import 'package:simple_frame_app/simple_frame_app.dart';
 
 void main() => runApp(const MainApp());
 
@@ -123,6 +123,7 @@ class MainAppState extends State<MainApp> with SimpleFrameAppState {
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Frame Flutter 'Hello, Hello!'"),
+          actions: [getBatteryWidget()]
         ),
         body: Center(
           child: Container(
